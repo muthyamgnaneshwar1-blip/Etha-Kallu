@@ -1,12 +1,745 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="0; url=etha_kallu_website-2.html">
-  <title>Etha Kallu</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Etha Kallu - Traditional Palm Heritage and Local Products in Kalvacherla, Telangana">
+
+<title>Etha Kallu | Traditional Palm Heritage</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#faf9f4;
+    color:#26352b;
+    line-height:1.6;
+}
+
+/* HEADER */
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#123b27;
+    color:white;
+    padding:16px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 3px 15px rgba(0,0,0,.2);
+}
+
+.logo{
+    font-size:23px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:22px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#e7b84b;
+}
+
+/* HERO */
+.hero{
+    min-height:75vh;
+    display:flex;
+    align-items:center;
+    padding:80px 7%;
+    color:white;
+
+    background:
+    linear-gradient(rgba(10,45,28,.72),rgba(10,45,28,.72)),
+    url("https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1800&q=85");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:720px;
+}
+
+.badge{
+    display:inline-block;
+    background:#e7b84b;
+    color:#163b27;
+    padding:7px 14px;
+    border-radius:30px;
+    font-weight:bold;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(45px,8vw,80px);
+    line-height:1;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:19px;
+    max-width:650px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:28px;
+    padding:13px 22px;
+    background:#e7b84b;
+    color:#173b27;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+/* SECTIONS */
+section{
+    padding:70px 7%;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    font-size:35px;
+    color:#17472d;
+    margin-bottom:12px;
+}
+
+.section-description{
+    text-align:center;
+    max-width:700px;
+    margin:0 auto 40px;
+    color:#68736b;
+}
+
+/* CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.card{
+    background:white;
+    border-radius:16px;
+    padding:28px;
+    border:1px solid #e4e8df;
+    box-shadow:0 7px 25px rgba(0,0,0,.07);
+    transition:.25s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
+}
+
+.card-icon{
+    font-size:35px;
+    margin-bottom:12px;
+}
+
+.card h3{
+    color:#205737;
+    margin-bottom:8px;
+}
+
+/* PRODUCTS */
+.products-section{
+    background:#eef4eb;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.product{
+    background:white;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 7px 25px rgba(0,0,0,.08);
+}
+
+.product-image{
+    height:180px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#dfe9dc;
+    font-size:65px;
+}
+
+.product-info{
+    padding:23px;
+}
+
+.product-info h3{
+    color:#17472d;
+    margin-bottom:7px;
+}
+
+.price{
+    font-size:22px;
+    font-weight:bold;
+    color:#b07b10;
+    margin:12px 0;
+}
+
+.product-btn{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#205737;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.product-btn:hover{
+    background:#143c25;
+}
+
+/* ENQUIRY */
+.enquiry{
+    background:white;
+}
+
+.enquiry-box{
+    max-width:650px;
+    margin:auto;
+    background:#f5f7f2;
+    padding:30px;
+    border-radius:16px;
+}
+
+input,textarea{
+    width:100%;
+    padding:13px;
+    margin:7px 0 16px;
+    border:1px solid #ccd4ca;
+    border-radius:8px;
+    font-size:16px;
+}
+
+textarea{
+    min-height:100px;
+}
+
+.submit-btn{
+    width:100%;
+    padding:14px;
+    background:#205737;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    font-weight:bold;
+}
+
+/* LOCATION */
+.location{
+    background:#123b27;
+    color:white;
+    text-align:center;
+}
+
+.location h2{
+    color:white;
+}
+
+.location p{
+    color:#dbe7de;
+}
+
+/* FOOTER */
+footer{
+    background:#0b2819;
+    color:#cbd8ce;
+    text-align:center;
+    padding:25px;
+    font-size:13px;
+}
+
+/* MOBILE */
+@media(max-width:750px){
+
+    header{
+        padding:14px 5%;
+    }
+
+    nav a{
+        margin-left:8px;
+        font-size:11px;
+    }
+
+    .hero{
+        min-height:70vh;
+        padding:70px 6%;
+    }
+
+    section{
+        padding:55px 6%;
+    }
+
+    .cards,
+    .products{
+        grid-template-columns:1fr;
+    }
+
+    .section-title{
+        font-size:30px;
+    }
+
+}
+</style>
 </head>
+
 <body>
-  <p>Loading Etha Kallu...</p>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">
+🌴 ETHA KALLU
+</div>
+
+<nav>
+<a href="#about">About</a>
+<a href="#heritage">Heritage</a>
+<a href="#products">Products</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<span class="badge">
+KALVACHERLA • TELANGANA
+</span>
+
+<h1>
+Etha Kallu
+</h1>
+
+<p>
+Discover the traditional palm heritage, local culture
+and natural surroundings of Kalvacherla, Telangana.
+</p>
+
+<a href="#products" class="btn">
+Explore Products ↓
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container">
+
+<h2 class="section-title">
+Welcome to Etha Kallu
+</h2>
+
+<p class="section-description">
+A professional showcase of traditional palm heritage,
+local culture and products from the Kalvacherla region.
+</p>
+
+
+<div class="cards">
+
+<div class="card">
+
+<div class="card-icon">🌴</div>
+
+<h3>
+Palm Tradition
+</h3>
+
+<p>
+Learn about traditional palm-related practices
+and their importance in rural Telangana.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">🌿</div>
+
+<h3>
+Natural Setting
+</h3>
+
+<p>
+Explore the rural landscape and natural environment
+around Kalvacherla.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">🏡</div>
+
+<h3>
+Local Heritage
+</h3>
+
+<p>
+Discover local traditions and cultural practices
+passed through generations.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- HERITAGE -->
+
+<section id="heritage" style="background:#eef4eb">
+
+<div class="container">
+
+<h2 class="section-title">
+Our Heritage
+</h2>
+
+<p class="section-description">
+
+Palm trees and palm-related traditions have been
+part of rural life in Telangana for generations.
+
+This website presents the heritage, environment
+and local culture in a simple and respectful way.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+
+<section id="products" class="products-section">
+
+<div class="container">
+
+<h2 class="section-title">
+Featured Products
+</h2>
+
+<p class="section-description">
+Demo product section — replace these placeholders
+with lawful, non-age-restricted products.
+</p>
+
+
+<div class="products">
+
+
+<div class="product">
+
+<div class="product-image">
+🌴
+</div>
+
+<div class="product-info">
+
+<h3>
+Traditional Palm Product
+</h3>
+
+<p>
+Fresh local product — sample listing.
+</p>
+
+<div class="price">
+₹80
+</div>
+
+<button
+class="product-btn"
+onclick="selectProduct('Traditional Palm Product')">
+
+Add to Enquiry
+
+</button>
+
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-image">
+🍃
+</div>
+
+<div class="product-info">
+
+<h3>
+Natural Palm Product
+</h3>
+
+<p>
+Local traditional product — sample listing.
+</p>
+
+<div class="price">
+₹150
+</div>
+
+<button
+class="product-btn"
+onclick="selectProduct('Natural Palm Product')">
+
+Add to Enquiry
+
+</button>
+
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-image">
+🌿
+</div>
+
+<div class="product-info">
+
+<h3>
+Local Heritage Product
+</h3>
+
+<p>
+Traditional local item — sample listing.
+</p>
+
+<div class="price">
+₹200
+</div>
+
+<button
+class="product-btn"
+onclick="selectProduct('Local Heritage Product')">
+
+Add to Enquiry
+
+</button>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ENQUIRY -->
+
+<section class="enquiry">
+
+<div class="container">
+
+<h2 class="section-title">
+Product Enquiry
+</h2>
+
+<p class="section-description">
+Send an enquiry about one of the sample products.
+</p>
+
+
+<div class="enquiry-box">
+
+<form onsubmit="submitEnquiry(event)">
+
+<label>
+Your Name
+</label>
+
+<input
+type="text"
+id="name"
+placeholder="Enter your name"
+required>
+
+
+<label>
+Phone Number
+</label>
+
+<input
+type="tel"
+id="phone"
+placeholder="Enter phone number"
+required>
+
+
+<label>
+Selected Product
+</label>
+
+<input
+type="text"
+id="selectedProduct"
+placeholder="Select a product above"
+readonly>
+
+
+<label>
+Message
+</label>
+
+<textarea
+id="message"
+placeholder="Write your enquiry">
+</textarea>
+
+
+<button class="submit-btn" type="submit">
+Send Enquiry
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="location">
+
+<div class="container">
+
+<h2 class="section-title">
+Visit Us
+</h2>
+
+<p>
+📍 Near Ellamma Temple, Kalvacherla, Telangana
+</p>
+
+<p>
+🌴 Etha Kallu — Traditional Palm Heritage
+</p>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 Etha Kallu • Traditional Palm Heritage
+<br>
+Kalvacherla, Telangana
+
+</footer>
+
+
+<script>
+
+function selectProduct(product){
+
+document.getElementById("selectedProduct").value = product;
+
+document.querySelector(".enquiry").scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+function submitEnquiry(event){
+
+event.preventDefault();
+
+let name =
+document.getElementById("name").value;
+
+let product =
+document.getElementById("selectedProduct").value;
+
+if(product === ""){
+
+alert("Please select a product first.");
+
+return;
+
+}
+
+alert(
+"Thank you " +
+name +
+"! Your enquiry for " +
+product +
+" has been prepared."
+);
+
+}
+
+</script>
+
 </body>
 </html>
