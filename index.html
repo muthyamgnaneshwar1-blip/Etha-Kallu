@@ -1,465 +1,612 @@
  <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Etha Kallu | Traditional Palm Heritage</title>
+<title>Etha Kallu | Traditional Palm Heritage</title>
 
-  <meta name="description"
-        content="Explore the traditional palm landscape, local heritage and surroundings of Kalvacherla, Telangana.">
+<meta name="description"
+content="Explore the traditional palm landscape and cultural heritage of Kalvacherla, Telangana.">
 
-  <style>
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+html{
+  scroll-behavior:smooth;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f4f7f1;
+  color:#26382b;
+  line-height:1.6;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f7f1;
-      color: #24352a;
-      line-height: 1.6;
-    }
+/* NAVIGATION */
 
-    /* NAVBAR */
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.97);
+  box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(255,255,255,0.96);
-      box-shadow: 0 2px 15px rgba(0,0,0,0.08);
-    }
+nav{
+  max-width:1150px;
+  margin:auto;
+  padding:17px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
 
-    nav {
-      max-width: 1150px;
-      margin: auto;
-      padding: 18px 6%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+.logo{
+  color:#17472d;
+  font-size:24px;
+  font-weight:bold;
+}
 
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: #17472d;
-    }
+nav a{
+  color:#385342;
+  text-decoration:none;
+  margin-left:20px;
+  font-size:15px;
+}
 
-    nav a {
-      text-decoration: none;
-      color: #385342;
-      margin-left: 20px;
-      font-size: 15px;
-    }
+nav a:hover{
+  color:#17472d;
+}
 
-    nav a:hover {
-      color: #17472d;
-    }
+/* HERO */
 
-    /* HERO */
+.hero{
+  min-height:620px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:80px 6%;
+  color:white;
 
-    .hero {
-      min-height: 600px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 80px 6%;
-      background:
-        linear-gradient(rgba(20,55,35,0.55),rgba(20,55,35,0.55)),
-        url("mainphoto.jpg") center/cover;
-      color: white;
-    }
+  background:
+    linear-gradient(rgba(15,55,32,.58),rgba(15,55,32,.58)),
+    url("mainphoto.jpg") center/cover no-repeat;
+}
 
-    .hero-content {
-      max-width: 800px;
-    }
+.hero-content{
+  max-width:820px;
+}
 
-    .hero h1 {
-      font-size: 55px;
-      margin-bottom: 18px;
-    }
+.hero h1{
+  font-size:56px;
+  margin-bottom:20px;
+}
 
-    .hero p {
-      font-size: 20px;
-      max-width: 650px;
-      margin: auto;
-    }
+.hero p{
+  font-size:20px;
+  max-width:700px;
+  margin:auto;
+}
 
-    .button {
-      display: inline-block;
-      margin-top: 28px;
-      padding: 13px 25px;
-      background: white;
-      color: #17472d;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: bold;
-    }
+.hero-button{
+  display:inline-block;
+  margin-top:30px;
+  padding:14px 28px;
+  background:white;
+  color:#17472d;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:bold;
+}
 
-    /* COMMON */
+/* COMMON */
 
-    section {
-      padding: 75px 6%;
-    }
+section{
+  padding:75px 6%;
+}
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-    }
+.container{
+  max-width:1100px;
+  margin:auto;
+}
 
-    .section-title {
-      text-align: center;
-      color: #17472d;
-      font-size: 36px;
-      margin-bottom: 15px;
-    }
+.section-title{
+  text-align:center;
+  color:#17472d;
+  font-size:38px;
+  margin-bottom:12px;
+}
 
-    .section-text {
-      max-width: 750px;
-      margin: 0 auto 40px;
-      text-align: center;
-      color: #647067;
-    }
+.section-text{
+  max-width:750px;
+  margin:0 auto 40px;
+  text-align:center;
+  color:#657168;
+}
 
-    /* ABOUT */
+/* ABOUT */
 
-    .about {
-      background: white;
-    }
+.about{
+  background:white;
+}
 
-    .about-box {
-      max-width: 850px;
-      margin: auto;
-      text-align: center;
-      font-size: 18px;
-      color: #536159;
-    }
+.about-card{
+  max-width:850px;
+  margin:auto;
+  padding:35px;
+  text-align:center;
+  background:#f4f7f1;
+  border-radius:25px;
+  color:#56635a;
+  font-size:18px;
+}
 
-    /* PHOTO GALLERY */
+/* GALLERY */
 
-    .gallery {
-      background: #eef4eb;
-    }
+.gallery{
+  background:#eef4eb;
+}
 
-    .photo {
-      overflow: hidden;
-      border-radius: 28px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-      background: white;
-    }
+.photo{
+  overflow:hidden;
+  border-radius:28px;
+  background:white;
+  box-shadow:0 12px 30px rgba(0,0,0,.15);
+}
 
-    .photo img {
-      width: 100%;
-      display: block;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
+.photo img{
+  width:100%;
+  display:block;
+  object-fit:cover;
+  transition:transform .5s ease;
+}
 
-    .photo img:hover {
-      transform: scale(1.03);
-    }
+.photo img:hover{
+  transform:scale(1.03);
+}
 
-    /* MAIN PHOTO */
+/* MAIN PHOTO */
 
-    .main-photo {
-      margin-bottom: 38px;
-    }
+.main-photo{
+  margin-bottom:40px;
+}
 
-    .main-photo img {
-      height: 480px;
-    }
+.main-photo img{
+  height:500px;
+}
 
-    /* DECORATIVE PHOTOS */
+/* DECORATIVE PHOTOS */
 
-    .side-photo {
-      margin-bottom: 38px;
-      width: 88%;
-    }
+.decorative-photo{
+  width:88%;
+  margin-bottom:40px;
+}
 
-    .side-photo.right {
-      margin-left: 12%;
-    }
+.decorative-photo.right{
+  margin-left:12%;
+}
 
-    .side-photo img {
-      height: 360px;
-    }
+.decorative-photo img{
+  height:370px;
+}
 
-    /* LOCATION */
+/* LOCATION PHOTO */
 
-    .location {
-      background: white;
-    }
+.location-photo{
+  margin-top:5px;
+}
 
-    .location-photo {
-      margin-top: 35px;
-    }
+.location-photo img{
+  height:420px;
+}
 
-    .location-photo img {
-      height: 400px;
-    }
+/* LOCATION */
 
-    .location-text {
-      text-align: center;
-      margin-top: 25px;
-      color: #59655d;
-    }
+.location{
+  background:white;
+  text-align:center;
+}
 
-    /* FOOTER */
+.location-info{
+  max-width:700px;
+  margin:auto;
+  padding:30px;
+  border-radius:25px;
+  background:#f1f5ef;
+}
 
-    footer {
-      background: #123a25;
-      color: white;
-      text-align: center;
-      padding: 35px 6%;
-    }
+.location-info h3{
+  color:#17472d;
+  margin-bottom:10px;
+}
 
-    footer h3 {
-      margin-bottom: 8px;
-    }
+.location-info p{
+  color:#657168;
+}
 
-    footer p {
-      opacity: 0.85;
-      font-size: 14px;
-    }
+/* CONTACT */
 
-    /* MOBILE */
+.contact{
+  background:#f4f7f1;
+}
 
-    @media (max-width: 700px) {
+.form-box{
+  max-width:650px;
+  margin:auto;
+  padding:35px;
+  background:white;
+  border-radius:25px;
+  box-shadow:0 10px 30px rgba(0,0,0,.09);
+}
 
-      nav {
-        flex-direction: column;
-        gap: 10px;
-      }
+.form-box input,
+.form-box textarea{
+  width:100%;
+  padding:14px;
+  margin-bottom:16px;
+  border:1px solid #ccd6cd;
+  border-radius:12px;
+  font-family:Arial,sans-serif;
+  font-size:15px;
+  outline:none;
+}
 
-      nav a {
-        margin: 0 7px;
-      }
+.form-box input:focus,
+.form-box textarea:focus{
+  border-color:#17472d;
+}
 
-      .hero {
-        min-height: 520px;
-      }
+.form-box textarea{
+  resize:vertical;
+}
 
-      .hero h1 {
-        font-size: 38px;
-      }
+.form-box button{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:30px;
+  background:#17472d;
+  color:white;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+}
 
-      .hero p {
-        font-size: 17px;
-      }
+.form-box button:hover{
+  background:#23643e;
+}
 
-      .section-title {
-        font-size: 30px;
-      }
+.form-note{
+  text-align:center;
+  margin-top:15px;
+  color:#7a837d;
+  font-size:13px;
+}
 
-      .main-photo img {
-        height: 350px;
-      }
+/* FOOTER */
 
-      .side-photo,
-      .side-photo.right {
-        width: 100%;
-        margin-left: 0;
-      }
+footer{
+  background:#123a25;
+  color:white;
+  text-align:center;
+  padding:40px 6%;
+}
 
-      .side-photo img {
-        height: 300px;
-      }
+footer h3{
+  font-size:22px;
+  margin-bottom:8px;
+}
 
-      .location-photo img {
-        height: 300px;
-      }
-    }
+footer p{
+  opacity:.85;
+  font-size:14px;
+  margin-top:5px;
+}
 
-  </style>
+/* MOBILE */
+
+@media(max-width:700px){
+
+  nav{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  nav a{
+    margin:0 6px;
+  }
+
+  .hero{
+    min-height:540px;
+  }
+
+  .hero h1{
+    font-size:39px;
+  }
+
+  .hero p{
+    font-size:17px;
+  }
+
+  .section-title{
+    font-size:30px;
+  }
+
+  .main-photo img{
+    height:350px;
+  }
+
+  .decorative-photo,
+  .decorative-photo.right{
+    width:100%;
+    margin-left:0;
+  }
+
+  .decorative-photo img{
+    height:300px;
+  }
+
+  .location-photo img{
+    height:300px;
+  }
+
+  .form-box{
+    padding:25px 18px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- NAVIGATION -->
+<!-- NAVIGATION -->
 
-  <header>
-    <nav>
+<header>
+<nav>
 
-      <div class="logo">
-        Etha Kallu
-      </div>
+<div class="logo">
+Etha Kallu
+</div>
 
-      <div>
-        <a href="#about">About</a>
-        <a href="#heritage">Heritage</a>
-        <a href="#location">Location</a>
-      </div>
+<div>
+<a href="#about">About</a>
+<a href="#heritage">Heritage</a>
+<a href="#location">Location</a>
+<a href="#contact">Contact</a>
+</div>
 
-    </nav>
-  </header>
+</nav>
+</header>
 
 
-  <!-- HERO -->
+<!-- HERO -->
 
-  <section class="hero">
+<section class="hero">
 
-    <div class="hero-content">
+<div class="hero-content">
 
-      <h1>Traditional Palm Heritage</h1>
+<h1>Traditional Palm Heritage</h1>
 
-      <p>
-        Discover the natural beauty, palm landscapes and traditional
-        surroundings of Kalvacherla, Telangana.
-      </p>
+<p>
+Discover the natural beauty, palm landscapes and traditional
+surroundings of Kalvacherla, Telangana.
+</p>
 
-      <a href="#heritage" class="button">
-        Explore Heritage
-      </a>
+<a href="#heritage" class="hero-button">
+Explore Heritage
+</a>
 
-    </div>
+</div>
 
-  </section>
+</section>
 
 
-  <!-- ABOUT -->
+<!-- ABOUT -->
 
-  <section class="about" id="about">
+<section class="about" id="about">
 
-    <div class="container">
+<div class="container">
 
-      <h2 class="section-title">
-        About Our Heritage
-      </h2>
+<h2 class="section-title">
+About Our Heritage
+</h2>
 
-      <p class="section-text">
-        A glimpse into the traditional palm landscape and local cultural
-        surroundings of Kalvacherla.
-      </p>
+<p class="section-text">
+A glimpse into the traditional palm landscape and local cultural
+surroundings of Kalvacherla.
+</p>
 
-      <div class="about-box">
+<div class="about-card">
 
-        <p>
-          Palm trees and traditional landscapes have long been part of
-          rural life in Telangana. This website showcases the natural
-          surroundings, local scenery and heritage of the Kalvacherla area.
-        </p>
+<p>
+Palm trees and traditional landscapes have long been part of
+rural life in Telangana. This website showcases the natural
+surroundings, local scenery and heritage of the Kalvacherla area.
+</p>
 
-      </div>
+</div>
 
-    </div>
+</div>
 
-  </section>
+</section>
 
 
-  <!-- PHOTO GALLERY -->
+<!-- PHOTO GALLERY -->
 
-  <section class="gallery" id="heritage">
+<section class="gallery" id="heritage">
 
-    <div class="container">
+<div class="container">
 
-      <h2 class="section-title">
-        Our Palm Heritage
-      </h2>
+<h2 class="section-title">
+Our Palm Heritage
+</h2>
 
-      <p class="section-text">
-        Explore the beauty of the palm landscape through these local photographs.
-      </p>
+<p class="section-text">
+Explore the beauty of the local palm landscape through these photographs.
+</p>
 
 
-      <!-- PHOTO 1 - MAIN -->
+<!-- MAIN PHOTO -->
 
-      <div class="photo main-photo">
+<div class="photo main-photo">
 
-        <img
-          src="mainphoto.jpg"
-          alt="Traditional palm landscape of Kalvacherla">
+<img
+src="mainphoto.jpg"
+alt="Traditional palm landscape of Kalvacherla">
 
-      </div>
+</div>
 
 
-      <!-- PHOTO 2 -->
+<!-- PHOTO 2 -->
 
-      <div class="photo side-photo">
+<div class="photo decorative-photo">
 
-        <img
-          src="palmtree.jpg"
-          alt="Palm tree landscape">
+<img
+src="palmtree.jpg"
+alt="Palm tree landscape">
 
-      </div>
+</div>
 
 
-      <!-- PHOTO 3 -->
+<!-- PHOTO 3 -->
 
-      <div class="photo side-photo right">
+<div class="photo decorative-photo right">
 
-        <img
-          src="palmtree 2.jpg"
-          alt="Palm trees and natural surroundings">
+<img
+src="palmtree 2.jpg"
+alt="Palm trees and natural surroundings">
 
-      </div>
+</div>
 
 
-      <!-- PHOTO 4 -->
+<!-- PHOTO 4 -->
 
-      <div class="photo location-photo">
+<div class="photo location-photo">
 
-        <img
-          src="yellammatemple-location.jpg"
-          alt="Ellamma Temple and surrounding location">
+<img
+src="yellammatemple-location.jpg"
+alt="Ellamma Temple and surrounding location">
 
-      </div>
+</div>
 
-    </div>
+</div>
 
-  </section>
+</section>
 
 
-  <!-- LOCATION -->
+<!-- LOCATION -->
 
-  <section class="location" id="location">
+<section class="location" id="location">
 
-    <div class="container">
+<div class="container">
 
-      <h2 class="section-title">
-        Our Location
-      </h2>
+<h2 class="section-title">
+Our Location
+</h2>
 
-      <p class="section-text">
-        Kalvacherla, Telangana
-      </p>
+<p class="section-text">
+Kalvacherla, Telangana
+</p>
 
-      <div class="location-text">
+<div class="location-info">
 
-        <p>
-          Near Ellamma Temple, Kalvacherla, Telangana.
-        </p>
+<h3>Ellamma Temple Area</h3>
 
-      </div>
+<p>
+Near Ellamma Temple, Kalvacherla, Telangana.
+</p>
 
-    </div>
+</div>
 
-  </section>
+</div>
 
+</section>
 
-  <!-- FOOTER -->
 
-  <footer>
+<!-- CONTACT -->
 
-    <h3>Etha Kallu</h3>
+<section class="contact" id="contact">
 
-    <p>
-      Traditional Palm Heritage • Kalvacherla • Telangana
-    </p>
+<div class="container">
 
-    <p>
-      © 2026 Etha Kallu. All rights reserved.
-    </p>
+<h2 class="section-title">
+Contact Us
+</h2>
 
-  </footer>
+<p class="section-text">
+Have a question about the heritage site or local surroundings?
+Send us a message.
+</p>
+
+
+<div class="form-box">
+
+<form
+action="https://formspree.io/f/mzeddzon"
+method="POST"
+>
+
+<input
+type="text"
+name="name"
+placeholder="Your name"
+required
+>
+
+<input
+type="email"
+name="email"
+placeholder="Your email"
+required
+>
+
+<textarea
+name="message"
+rows="6"
+placeholder="Your message"
+required
+></textarea>
+
+<button type="submit">
+Send Message
+</button>
+
+<p class="form-note">
+Your message will be submitted through our contact form.
+</p>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<h3>
+Etha Kallu
+</h3>
+
+<p>
+Traditional Palm Heritage • Kalvacherla • Telangana
+</p>
+
+<p>
+© 2026 Etha Kallu. All rights reserved.
+</p>
+
+</footer>
 
 </body>
 </html>
