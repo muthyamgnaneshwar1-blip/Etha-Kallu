@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Etha Kallu | Traditional Palm Heritage</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;color:#24351f;background:#fffdf7;line-height:1.6}
+header{background:linear-gradient(135deg,#173b22,#4d7130);color:white;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10}
+.logo{font-size:25px;font-weight:800;letter-spacing:1px}
+nav a{color:white;text-decoration:none;margin-left:18px;font-size:14px}
+.hero{min-height:72vh;padding:90px 7%;display:flex;align-items:center;background:linear-gradient(rgba(20,50,25,.62),rgba(20,50,25,.62)),url('https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1600&q=80') center/cover;color:white}
+.hero div{max-width:700px}
+.badge{display:inline-block;background:#e8b84b;color:#173b22;padding:7px 14px;border-radius:30px;font-weight:bold;margin-bottom:18px}
+h1{font-size:clamp(42px,8vw,78px);line-height:1;margin-bottom:18px}
+.hero p{font-size:19px;max-width:620px}
+.btn{display:inline-block;margin-top:25px;padding:13px 22px;border-radius:8px;background:#e8b84b;color:#173b22;text-decoration:none;font-weight:700}
+section{padding:65px 7%}
+.section-title{text-align:center;font-size:34px;margin-bottom:12px;color:#24451f}
+.lead{text-align:center;max-width:720px;margin:0 auto 35px;color:#586252}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1050px;margin:auto}
+.card{background:white;padding:25px;border-radius:14px;box-shadow:0 5px 20px #0000000d;border:1px solid #e9eadf}
+.card h3{margin-bottom:8px;color:#315a2a}
+.about{background:#f1f5e9}
+.booking{max-width:700px;margin:auto;background:white;padding:28px;border-radius:16px;box-shadow:0 6px 25px #00000012}
+label{display:block;margin-top:15px;font-weight:bold}
+input,select,textarea{width:100%;padding:12px;margin-top:6px;border:1px solid #ccd2c4;border-radius:8px;font-size:16px}
+button{border:0;cursor:pointer;width:100%;margin-top:20px;padding:14px;border-radius:8px;background:#315a2a;color:white;font-size:16px;font-weight:bold}
+.notice{font-size:13px;color:#6a705f;margin-top:12px}
+.contact{text-align:center;background:#173b22;color:white}
+.contact .section-title{color:white}
+footer{text-align:center;padding:22px;background:#102b19;color:#dce7d4;font-size:13px}
+@media(max-width:700px){header{padding:15px 5%}nav{display:none}.hero{padding:70px 6%}.cards{grid-template-columns:1fr}section{padding:50px 6%}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🌴 ETHA KALLU</div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#tradition">Tradition</a>
+    <a href="#booking">Book a Visit</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <span class="badge">Kalvacherla • Telangana</span>
+    <h1>Etha Kallu</h1>
+    <p>Discover the traditional palm-tapping heritage of Telangana in a natural rural setting near Ellamma Temple, Kalvacherla.</p>
+    <a class="btn" href="#booking">Book a Visit</a>
+  </div>
+</section>
+
+<section id="about">
+  <h2 class="section-title">Welcome to Etha Kallu</h2>
+  <p class="lead">A simple place to learn about local palm traditions, the trees, the people and the heritage that connects them.</p>
+  <div class="cards">
+    <div class="card"><h3>🌴 Palm Tradition</h3><p>Learn about the traditional process of collecting sap from local palmyra and palm trees.</p></div>
+    <div class="card"><h3>🌿 Natural Setting</h3><p>Enjoy a calm rural atmosphere surrounded by the landscape and traditions of Kalvacherla.</p></div>
+    <div class="card"><h3>🏡 Local Heritage</h3><p>Experience a small part of Telangana's living rural culture and generations-old practices.</p></div>
+  </div>
+</section>
+
+<section id="tradition" class="about">
+  <h2 class="section-title">Our Tradition</h2>
+  <p class="lead">Palm-tapping is a long-standing rural tradition. At Etha Kallu, we present this heritage in a simple, respectful and responsible way, with respect for the trees, land and local community.</p>
+</section>
+
+<section id="booking">
+  <h2 class="section-title">Book a Visit</h2>
+  <p class="lead">Request a date and time to visit. This form is for a visit/experience request, not for alcohol sales or delivery.</p>
+  <form class="booking" onsubmit="bookVisit(event)">
+    <label>Name</label><input id="name" required>
+    <label>Phone</label><input id="phone" type="tel" required>
+    <label>Visit Date</label><input id="date" type="date" required>
+    <label>Preferred Time</label>
+    <select id="time" required><option value="">Select</option><option>Morning</option><option>Afternoon</option><option>Evening</option></select>
+    <label>Number of Visitors</label><input id="people" type="number" min="1" max="20" required>
+    <label>Message (optional)</label><textarea id="message" rows="3"></textarea>
+    <button type="submit">Submit Visit Request</button>
+    <p class="notice">Requests are subject to availability and applicable local laws and regulations.</p>
+  </form>
+</section>
+
+<section id="contact" class="contact">
+  <h2 class="section-title">Visit Us</h2>
+  <p>📍 Near Ellamma Temple, Kalvacherla, Telangana</p>
+  <p>🌴 Etha Kallu — Traditional Palm Heritage</p>
+</section>
+
+<footer>© 2026 Etha Kallu. Traditional heritage experience. All rights reserved.</footer>
+
+<script>
+function bookVisit(e){
+  e.preventDefault();
+  const name=document.getElementById('name').value;
+  const date=document.getElementById('date').value;
+  const people=document.getElementById('people').value;
+  alert("Thank you, "+name+"! Your visit request for "+date+" for "+people+" visitor(s) has been recorded on this page. Please contact the business directly to confirm.");
+}
+</script>
+</body>
+</html>
