@@ -1,745 +1,465 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description"
-content="Etha Kallu - Traditional Palm Heritage and Local Products in Kalvacherla, Telangana">
+  <title>Etha Kallu | Traditional Palm Heritage</title>
 
-<title>Etha Kallu | Traditional Palm Heritage</title>
+  <meta name="description"
+        content="Explore the traditional palm landscape, local heritage and surroundings of Kalvacherla, Telangana.">
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+  <style>
 
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#faf9f4;
-    color:#26352b;
-    line-height:1.6;
-}
-
-/* HEADER */
-header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:#123b27;
-    color:white;
-    padding:16px 6%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    box-shadow:0 3px 15px rgba(0,0,0,.2);
-}
-
-.logo{
-    font-size:23px;
-    font-weight:bold;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:22px;
-    font-size:14px;
-    font-weight:bold;
-}
-
-nav a:hover{
-    color:#e7b84b;
-}
-
-/* HERO */
-.hero{
-    min-height:75vh;
-    display:flex;
-    align-items:center;
-    padding:80px 7%;
-    color:white;
-
-    background:
-    linear-gradient(rgba(10,45,28,.72),rgba(10,45,28,.72)),
-    url("https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1800&q=85");
-
-    background-size:cover;
-    background-position:center;
-}
-
-.hero-content{
-    max-width:720px;
-}
-
-.badge{
-    display:inline-block;
-    background:#e7b84b;
-    color:#163b27;
-    padding:7px 14px;
-    border-radius:30px;
-    font-weight:bold;
-    font-size:13px;
-    margin-bottom:20px;
-}
-
-.hero h1{
-    font-size:clamp(45px,8vw,80px);
-    line-height:1;
-    margin-bottom:20px;
-}
-
-.hero p{
-    font-size:19px;
-    max-width:650px;
-}
-
-.btn{
-    display:inline-block;
-    margin-top:28px;
-    padding:13px 22px;
-    background:#e7b84b;
-    color:#173b27;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:bold;
-}
-
-/* SECTIONS */
-section{
-    padding:70px 7%;
-}
-
-.container{
-    max-width:1100px;
-    margin:auto;
-}
-
-.section-title{
-    text-align:center;
-    font-size:35px;
-    color:#17472d;
-    margin-bottom:12px;
-}
-
-.section-description{
-    text-align:center;
-    max-width:700px;
-    margin:0 auto 40px;
-    color:#68736b;
-}
-
-/* CARDS */
-.cards{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
-}
-
-.card{
-    background:white;
-    border-radius:16px;
-    padding:28px;
-    border:1px solid #e4e8df;
-    box-shadow:0 7px 25px rgba(0,0,0,.07);
-    transition:.25s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 12px 30px rgba(0,0,0,.12);
-}
-
-.card-icon{
-    font-size:35px;
-    margin-bottom:12px;
-}
-
-.card h3{
-    color:#205737;
-    margin-bottom:8px;
-}
-
-/* PRODUCTS */
-.products-section{
-    background:#eef4eb;
-}
-
-.products{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
-}
-
-.product{
-    background:white;
-    border-radius:16px;
-    overflow:hidden;
-    box-shadow:0 7px 25px rgba(0,0,0,.08);
-}
-
-.product-image{
-    height:180px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#dfe9dc;
-    font-size:65px;
-}
-
-.product-info{
-    padding:23px;
-}
-
-.product-info h3{
-    color:#17472d;
-    margin-bottom:7px;
-}
-
-.price{
-    font-size:22px;
-    font-weight:bold;
-    color:#b07b10;
-    margin:12px 0;
-}
-
-.product-btn{
-    width:100%;
-    padding:12px;
-    border:none;
-    border-radius:8px;
-    background:#205737;
-    color:white;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-.product-btn:hover{
-    background:#143c25;
-}
-
-/* ENQUIRY */
-.enquiry{
-    background:white;
-}
-
-.enquiry-box{
-    max-width:650px;
-    margin:auto;
-    background:#f5f7f2;
-    padding:30px;
-    border-radius:16px;
-}
-
-input,textarea{
-    width:100%;
-    padding:13px;
-    margin:7px 0 16px;
-    border:1px solid #ccd4ca;
-    border-radius:8px;
-    font-size:16px;
-}
-
-textarea{
-    min-height:100px;
-}
-
-.submit-btn{
-    width:100%;
-    padding:14px;
-    background:#205737;
-    color:white;
-    border:none;
-    border-radius:8px;
-    font-size:16px;
-    font-weight:bold;
-}
-
-/* LOCATION */
-.location{
-    background:#123b27;
-    color:white;
-    text-align:center;
-}
-
-.location h2{
-    color:white;
-}
-
-.location p{
-    color:#dbe7de;
-}
-
-/* FOOTER */
-footer{
-    background:#0b2819;
-    color:#cbd8ce;
-    text-align:center;
-    padding:25px;
-    font-size:13px;
-}
-
-/* MOBILE */
-@media(max-width:750px){
-
-    header{
-        padding:14px 5%;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    nav a{
-        margin-left:8px;
-        font-size:11px;
+    html {
+      scroll-behavior: smooth;
     }
 
-    .hero{
-        min-height:70vh;
-        padding:70px 6%;
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f1;
+      color: #24352a;
+      line-height: 1.6;
     }
 
-    section{
-        padding:55px 6%;
+    /* NAVBAR */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.96);
+      box-shadow: 0 2px 15px rgba(0,0,0,0.08);
     }
 
-    .cards,
-    .products{
-        grid-template-columns:1fr;
+    nav {
+      max-width: 1150px;
+      margin: auto;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    .section-title{
-        font-size:30px;
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #17472d;
     }
 
-}
-</style>
+    nav a {
+      text-decoration: none;
+      color: #385342;
+      margin-left: 20px;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: #17472d;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 6%;
+      background:
+        linear-gradient(rgba(20,55,35,0.55),rgba(20,55,35,0.55)),
+        url("mainphoto.jpg") center/cover;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-size: 55px;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 13px 25px;
+      background: white;
+      color: #17472d;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+
+    /* COMMON */
+
+    section {
+      padding: 75px 6%;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #17472d;
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .section-text {
+      max-width: 750px;
+      margin: 0 auto 40px;
+      text-align: center;
+      color: #647067;
+    }
+
+    /* ABOUT */
+
+    .about {
+      background: white;
+    }
+
+    .about-box {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      font-size: 18px;
+      color: #536159;
+    }
+
+    /* PHOTO GALLERY */
+
+    .gallery {
+      background: #eef4eb;
+    }
+
+    .photo {
+      overflow: hidden;
+      border-radius: 28px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+      background: white;
+    }
+
+    .photo img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .photo img:hover {
+      transform: scale(1.03);
+    }
+
+    /* MAIN PHOTO */
+
+    .main-photo {
+      margin-bottom: 38px;
+    }
+
+    .main-photo img {
+      height: 480px;
+    }
+
+    /* DECORATIVE PHOTOS */
+
+    .side-photo {
+      margin-bottom: 38px;
+      width: 88%;
+    }
+
+    .side-photo.right {
+      margin-left: 12%;
+    }
+
+    .side-photo img {
+      height: 360px;
+    }
+
+    /* LOCATION */
+
+    .location {
+      background: white;
+    }
+
+    .location-photo {
+      margin-top: 35px;
+    }
+
+    .location-photo img {
+      height: 400px;
+    }
+
+    .location-text {
+      text-align: center;
+      margin-top: 25px;
+      color: #59655d;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #123a25;
+      color: white;
+      text-align: center;
+      padding: 35px 6%;
+    }
+
+    footer h3 {
+      margin-bottom: 8px;
+    }
+
+    footer p {
+      opacity: 0.85;
+      font-size: 14px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav a {
+        margin: 0 7px;
+      }
+
+      .hero {
+        min-height: 520px;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .section-title {
+        font-size: 30px;
+      }
+
+      .main-photo img {
+        height: 350px;
+      }
+
+      .side-photo,
+      .side-photo.right {
+        width: 100%;
+        margin-left: 0;
+      }
+
+      .side-photo img {
+        height: 300px;
+      }
+
+      .location-photo img {
+        height: 300px;
+      }
+    }
+
+  </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
+  <!-- NAVIGATION -->
 
-<header>
+  <header>
+    <nav>
 
-<div class="logo">
-🌴 ETHA KALLU
-</div>
+      <div class="logo">
+        Etha Kallu
+      </div>
 
-<nav>
-<a href="#about">About</a>
-<a href="#heritage">Heritage</a>
-<a href="#products">Products</a>
-<a href="#contact">Contact</a>
-</nav>
+      <div>
+        <a href="#about">About</a>
+        <a href="#heritage">Heritage</a>
+        <a href="#location">Location</a>
+      </div>
 
-</header>
+    </nav>
+  </header>
 
 
-<!-- HERO -->
+  <!-- HERO -->
 
-<section class="hero">
+  <section class="hero">
 
-<div class="hero-content">
+    <div class="hero-content">
 
-<span class="badge">
-KALVACHERLA • TELANGANA
-</span>
+      <h1>Traditional Palm Heritage</h1>
 
-<h1>
-Etha Kallu
-</h1>
+      <p>
+        Discover the natural beauty, palm landscapes and traditional
+        surroundings of Kalvacherla, Telangana.
+      </p>
 
-<p>
-Discover the traditional palm heritage, local culture
-and natural surroundings of Kalvacherla, Telangana.
-</p>
+      <a href="#heritage" class="button">
+        Explore Heritage
+      </a>
 
-<a href="#products" class="btn">
-Explore Products ↓
-</a>
+    </div>
 
-</div>
+  </section>
 
-</section>
 
+  <!-- ABOUT -->
 
-<!-- ABOUT -->
+  <section class="about" id="about">
 
-<section id="about">
+    <div class="container">
 
-<div class="container">
+      <h2 class="section-title">
+        About Our Heritage
+      </h2>
 
-<h2 class="section-title">
-Welcome to Etha Kallu
-</h2>
+      <p class="section-text">
+        A glimpse into the traditional palm landscape and local cultural
+        surroundings of Kalvacherla.
+      </p>
 
-<p class="section-description">
-A professional showcase of traditional palm heritage,
-local culture and products from the Kalvacherla region.
-</p>
+      <div class="about-box">
 
+        <p>
+          Palm trees and traditional landscapes have long been part of
+          rural life in Telangana. This website showcases the natural
+          surroundings, local scenery and heritage of the Kalvacherla area.
+        </p>
 
-<div class="cards">
+      </div>
 
-<div class="card">
+    </div>
 
-<div class="card-icon">🌴</div>
+  </section>
 
-<h3>
-Palm Tradition
-</h3>
 
-<p>
-Learn about traditional palm-related practices
-and their importance in rural Telangana.
-</p>
+  <!-- PHOTO GALLERY -->
 
-</div>
+  <section class="gallery" id="heritage">
 
+    <div class="container">
 
-<div class="card">
+      <h2 class="section-title">
+        Our Palm Heritage
+      </h2>
 
-<div class="card-icon">🌿</div>
+      <p class="section-text">
+        Explore the beauty of the palm landscape through these local photographs.
+      </p>
 
-<h3>
-Natural Setting
-</h3>
 
-<p>
-Explore the rural landscape and natural environment
-around Kalvacherla.
-</p>
+      <!-- PHOTO 1 - MAIN -->
 
-</div>
+      <div class="photo main-photo">
 
+        <img
+          src="mainphoto.jpg"
+          alt="Traditional palm landscape of Kalvacherla">
 
-<div class="card">
+      </div>
 
-<div class="card-icon">🏡</div>
 
-<h3>
-Local Heritage
-</h3>
+      <!-- PHOTO 2 -->
 
-<p>
-Discover local traditions and cultural practices
-passed through generations.
-</p>
+      <div class="photo side-photo">
 
-</div>
+        <img
+          src="palmtree.jpg"
+          alt="Palm tree landscape">
 
-</div>
+      </div>
 
-</div>
 
-</section>
+      <!-- PHOTO 3 -->
 
+      <div class="photo side-photo right">
 
-<!-- HERITAGE -->
+        <img
+          src="palmtree 2.jpg"
+          alt="Palm trees and natural surroundings">
 
-<section id="heritage" style="background:#eef4eb">
+      </div>
 
-<div class="container">
 
-<h2 class="section-title">
-Our Heritage
-</h2>
+      <!-- PHOTO 4 -->
 
-<p class="section-description">
+      <div class="photo location-photo">
 
-Palm trees and palm-related traditions have been
-part of rural life in Telangana for generations.
+        <img
+          src="yellammatemple-location.jpg"
+          alt="Ellamma Temple and surrounding location">
 
-This website presents the heritage, environment
-and local culture in a simple and respectful way.
+      </div>
 
-</p>
+    </div>
 
-</div>
+  </section>
 
-</section>
 
+  <!-- LOCATION -->
 
-<!-- PRODUCTS -->
+  <section class="location" id="location">
 
-<section id="products" class="products-section">
+    <div class="container">
 
-<div class="container">
+      <h2 class="section-title">
+        Our Location
+      </h2>
 
-<h2 class="section-title">
-Featured Products
-</h2>
+      <p class="section-text">
+        Kalvacherla, Telangana
+      </p>
 
-<p class="section-description">
-Demo product section — replace these placeholders
-with lawful, non-age-restricted products.
-</p>
+      <div class="location-text">
 
+        <p>
+          Near Ellamma Temple, Kalvacherla, Telangana.
+        </p>
 
-<div class="products">
+      </div>
 
+    </div>
 
-<div class="product">
+  </section>
 
-<div class="product-image">
-🌴
-</div>
 
-<div class="product-info">
+  <!-- FOOTER -->
 
-<h3>
-Traditional Palm Product
-</h3>
+  <footer>
 
-<p>
-Fresh local product — sample listing.
-</p>
+    <h3>Etha Kallu</h3>
 
-<div class="price">
-₹80
-</div>
+    <p>
+      Traditional Palm Heritage • Kalvacherla • Telangana
+    </p>
 
-<button
-class="product-btn"
-onclick="selectProduct('Traditional Palm Product')">
+    <p>
+      © 2026 Etha Kallu. All rights reserved.
+    </p>
 
-Add to Enquiry
-
-</button>
-
-</div>
-
-</div>
-
-
-<div class="product">
-
-<div class="product-image">
-🍃
-</div>
-
-<div class="product-info">
-
-<h3>
-Natural Palm Product
-</h3>
-
-<p>
-Local traditional product — sample listing.
-</p>
-
-<div class="price">
-₹150
-</div>
-
-<button
-class="product-btn"
-onclick="selectProduct('Natural Palm Product')">
-
-Add to Enquiry
-
-</button>
-
-</div>
-
-</div>
-
-
-<div class="product">
-
-<div class="product-image">
-🌿
-</div>
-
-<div class="product-info">
-
-<h3>
-Local Heritage Product
-</h3>
-
-<p>
-Traditional local item — sample listing.
-</p>
-
-<div class="price">
-₹200
-</div>
-
-<button
-class="product-btn"
-onclick="selectProduct('Local Heritage Product')">
-
-Add to Enquiry
-
-</button>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ENQUIRY -->
-
-<section class="enquiry">
-
-<div class="container">
-
-<h2 class="section-title">
-Product Enquiry
-</h2>
-
-<p class="section-description">
-Send an enquiry about one of the sample products.
-</p>
-
-
-<div class="enquiry-box">
-
-<form onsubmit="submitEnquiry(event)">
-
-<label>
-Your Name
-</label>
-
-<input
-type="text"
-id="name"
-placeholder="Enter your name"
-required>
-
-
-<label>
-Phone Number
-</label>
-
-<input
-type="tel"
-id="phone"
-placeholder="Enter phone number"
-required>
-
-
-<label>
-Selected Product
-</label>
-
-<input
-type="text"
-id="selectedProduct"
-placeholder="Select a product above"
-readonly>
-
-
-<label>
-Message
-</label>
-
-<textarea
-id="message"
-placeholder="Write your enquiry">
-</textarea>
-
-
-<button class="submit-btn" type="submit">
-Send Enquiry
-</button>
-
-</form>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section id="contact" class="location">
-
-<div class="container">
-
-<h2 class="section-title">
-Visit Us
-</h2>
-
-<p>
-📍 Near Ellamma Temple, Kalvacherla, Telangana
-</p>
-
-<p>
-🌴 Etha Kallu — Traditional Palm Heritage
-</p>
-
-</div>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-© 2026 Etha Kallu • Traditional Palm Heritage
-<br>
-Kalvacherla, Telangana
-
-</footer>
-
-
-<script>
-
-function selectProduct(product){
-
-document.getElementById("selectedProduct").value = product;
-
-document.querySelector(".enquiry").scrollIntoView({
-behavior:"smooth"
-});
-
-}
-
-
-function submitEnquiry(event){
-
-event.preventDefault();
-
-let name =
-document.getElementById("name").value;
-
-let product =
-document.getElementById("selectedProduct").value;
-
-if(product === ""){
-
-alert("Please select a product first.");
-
-return;
-
-}
-
-alert(
-"Thank you " +
-name +
-"! Your enquiry for " +
-product +
-" has been prepared."
-);
-
-}
-
-</script>
+  </footer>
 
 </body>
 </html>
