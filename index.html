@@ -1,15 +1,10 @@
- <!DOCTYPE html>
-<html lang="en">
+ <!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Etha Kallu | Traditional Palm Heritage</title>
-
-<meta name="description"
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Etha Kallu | Traditional Palm Heritage</title><meta name="description"
 content="Explore the traditional palm landscape and cultural heritage of Kalvacherla, Telangana.">
 
-<style>
+<!-- Supabase --><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><style>
 *{
   margin:0;
   padding:0;
@@ -230,6 +225,92 @@ section{
   color:#657168;
 }
 
+/* BOOKING */
+
+.booking{
+  background:#eef4eb;
+}
+
+.booking-box{
+  max-width:700px;
+  margin:auto;
+  padding:35px;
+  background:white;
+  border-radius:25px;
+  box-shadow:0 10px 30px rgba(0,0,0,.09);
+}
+
+.booking-box input,
+.booking-box select,
+.booking-box textarea{
+  width:100%;
+  padding:14px;
+  margin-bottom:16px;
+  border:1px solid #ccd6cd;
+  border-radius:12px;
+  font-family:Arial,sans-serif;
+  font-size:15px;
+  outline:none;
+  background:white;
+}
+
+.booking-box input:focus,
+.booking-box select:focus,
+.booking-box textarea:focus{
+  border-color:#17472d;
+}
+
+.booking-box textarea{
+  resize:vertical;
+}
+
+.booking-box button{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:30px;
+  background:#17472d;
+  color:white;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.booking-box button:hover{
+  background:#23643e;
+}
+
+.booking-box button:disabled{
+  opacity:.6;
+  cursor:not-allowed;
+}
+
+.booking-note{
+  text-align:center;
+  margin-top:15px;
+  color:#7a837d;
+  font-size:13px;
+}
+
+.booking-message{
+  display:none;
+  padding:14px;
+  margin-bottom:18px;
+  border-radius:12px;
+  text-align:center;
+  font-weight:bold;
+}
+
+.booking-success{
+  background:#e5f4e8;
+  color:#176331;
+}
+
+.booking-error{
+  background:#fbe8e8;
+  color:#9b2525;
+}
+
 /* CONTACT */
 
 .contact{
@@ -356,257 +437,270 @@ footer p{
     height:300px;
   }
 
+  .booking-box,
   .form-box{
     padding:25px 18px;
   }
 }
-</style>
-</head>
-
-<body>
-
-<!-- NAVIGATION -->
-
-<header>
-<nav>
-
-<div class="logo">
+</style></head><body><!-- NAVIGATION --><header>
+<nav><div class="logo">
 Etha Kallu
-</div>
-
-<div>
+</div><div>
 <a href="#about">About</a>
 <a href="#heritage">Heritage</a>
 <a href="#location">Location</a>
+<a href="#booking">Book a Visit</a>
 <a href="#contact">Contact</a>
-</div>
-
-</nav>
-</header>
-
-
-<!-- HERO -->
-
-<section class="hero">
-
-<div class="hero-content">
-
-<h1>Traditional Palm Heritage</h1>
-
-<p>
+</div></nav>
+</header><!-- HERO --><section class="hero"><div class="hero-content"><h1>Traditional Palm Heritage</h1><p>
 Discover the natural beauty, palm landscapes and traditional
 surroundings of Kalvacherla, Telangana.
-</p>
-
-<a href="#heritage" class="hero-button">
+</p><a href="#heritage" class="hero-button">
 Explore Heritage
-</a>
-
-</div>
-
-</section>
-
-
-<!-- ABOUT -->
-
-<section class="about" id="about">
-
-<div class="container">
-
-<h2 class="section-title">
+</a></div></section><!-- ABOUT --><section class="about" id="about"><div class="container"><h2 class="section-title">
 About Our Heritage
-</h2>
-
-<p class="section-text">
+</h2><p class="section-text">
 A glimpse into the traditional palm landscape and local cultural
 surroundings of Kalvacherla.
-</p>
-
-<div class="about-card">
-
-<p>
+</p><div class="about-card"><p>
 Palm trees and traditional landscapes have long been part of
 rural life in Telangana. This website showcases the natural
 surroundings, local scenery and heritage of the Kalvacherla area.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- PHOTO GALLERY -->
-
-<section class="gallery" id="heritage">
-
-<div class="container">
-
-<h2 class="section-title">
+</p></div></div></section><!-- PHOTO GALLERY --><section class="gallery" id="heritage"><div class="container"><h2 class="section-title">
 Our Palm Heritage
-</h2>
-
-<p class="section-text">
+</h2><p class="section-text">
 Explore the beauty of the local palm landscape through these photographs.
-</p>
-
-
-<!-- MAIN PHOTO -->
-
-<div class="photo main-photo">
-
-<img
+</p><div class="photo main-photo"><img
 src="mainphoto.jpg"
 alt="Traditional palm landscape of Kalvacherla">
 
-</div>
-
-
-<!-- PHOTO 2 -->
-
-<div class="photo decorative-photo">
-
-<img
+</div><div class="photo decorative-photo"><img
 src="palmtree.jpg"
 alt="Palm tree landscape">
 
-</div>
-
-
-<!-- PHOTO 3 -->
-
-<div class="photo decorative-photo right">
-
-<img
+</div><div class="photo decorative-photo right"><img
 src="palmtree 2.jpg"
 alt="Palm trees and natural surroundings">
 
-</div>
-
-
-<!-- PHOTO 4 -->
-
-<div class="photo location-photo">
-
-<img
+</div><div class="photo location-photo"><img
 src="yellammatemple-location.jpg"
 alt="Ellamma Temple and surrounding location">
 
-</div>
-
-</div>
-
-</section>
-
-
-<!-- LOCATION -->
-
-<section class="location" id="location">
-
-<div class="container">
-
-<h2 class="section-title">
+</div></div></section><!-- LOCATION --><section class="location" id="location"><div class="container"><h2 class="section-title">
 Our Location
-</h2>
-
-<p class="section-text">
+</h2><p class="section-text">
 Kalvacherla, Telangana
-</p>
-
-<div class="location-info">
-
-<h3>Ellamma Temple Area</h3>
-
-<p>
+</p><div class="location-info"><h3>Ellamma Temple Area</h3><p>
 Near Ellamma Temple, Kalvacherla, Telangana.
-</p>
+</p></div></div></section><!-- BOOKING --><section class="booking" id="booking"><div class="container"><h2 class="section-title">
+Book a Visit
+</h2><p class="section-text">
+Plan your visit to experience the traditional palm heritage
+and surroundings of Kalvacherla.
+</p><div class="booking-box"><div id="bookingSuccess" class="booking-message booking-success">
+Your visit request has been submitted successfully. Thank you!
+</div><div id="bookingError" class="booking-message booking-error">
+Something went wrong. Please try again.
+</div><form id="bookingForm"><input
+type="text"
+id="bookingName"
+placeholder="Your name"
+required
 
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section class="contact" id="contact">
-
-<div class="container">
-
-<h2 class="section-title">
-Contact Us
-</h2>
-
-<p class="section-text">
-Have a question about the heritage site or local surroundings?
-Send us a message.
-</p>
-
-
-<div class="form-box">
-
-<form
-action="https://formspree.io/f/mzeddzon"
-method="POST"
->
+«»
 
 <input
+type="tel"
+id="bookingPhone"
+placeholder="Phone number"
+required
+
+«»
+
+<input
+type="date"
+id="bookingDate"
+required
+
+«»
+
+<select id="bookingTime" required>
+<option value="">Select preferred time</option>
+<option value="Morning">Morning</option>
+<option value="Afternoon">Afternoon</option>
+<option value="Evening">Evening</option>
+</select><input
+type="number"
+id="bookingVisitors"
+placeholder="Number of visitors"
+min="1"
+required
+
+«»
+
+<select id="bookingExperience" required>
+<option value="">Select experience</option>
+<option value="Heritage Visit">Heritage Visit</option>
+<option value="Palm Landscape Visit">Palm Landscape Visit</option>
+<option value="Cultural & Heritage Experience">Cultural & Heritage Experience</option>
+</select><textarea
+id="bookingMessage"
+rows="5"
+placeholder="Special request or message (optional)"
+></textarea><button type="submit" id="bookingButton">
+Submit Booking
+</button><p class="booking-note">
+Your booking request will be securely submitted to our visitor database.
+</p></form></div></div></section><!-- CONTACT --><section class="contact" id="contact"><div class="container"><h2 class="section-title">
+Contact Us
+</h2><p class="section-text">
+Have a question about the heritage site or local surroundings?
+Send us a message.
+</p><div class="form-box"><form
+action="https://formspree.io/f/mzeddzon"
+method="POST"
+><input
 type="text"
 name="name"
 placeholder="Your name"
 required
->
+
+«»
 
 <input
 type="email"
 name="email"
 placeholder="Your email"
 required
->
+
+«»
 
 <textarea
 name="message"
 rows="6"
 placeholder="Your message"
 required
-></textarea>
-
-<button type="submit">
+></textarea><button type="submit">
 Send Message
-</button>
-
-<p class="form-note">
+</button><p class="form-note">
 Your message will be submitted through our contact form.
-</p>
-
-</form>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-<h3>
+</p></form></div></div></section><!-- FOOTER --><footer><h3>
 Etha Kallu
-</h3>
-
-<p>
+</h3><p>
 Traditional Palm Heritage • Kalvacherla • Telangana
-</p>
-
-<p>
+</p><p>
 © 2026 Etha Kallu. All rights reserved.
-</p>
+</p></footer><!-- SUPABASE BOOKING CONNECTION --><script>
 
-</footer>
+const SUPABASE_URL =
+"https://iwunctfokqdtwzmolchg.supabase.co";
 
-</body>
-</html>
+const SUPABASE_ANON_KEY =
+"sb_publishable_Ij931uPjudOAUqSGG-RJVQ_QAeLmexJ";
+
+const { createClient } = supabase;
+
+const supabaseClient =
+createClient(
+  SUPABASE_URL,
+  SUPABASE_ANON_KEY
+);
+
+
+const bookingForm =
+document.getElementById("bookingForm");
+
+const bookingButton =
+document.getElementById("bookingButton");
+
+const bookingSuccess =
+document.getElementById("bookingSuccess");
+
+const bookingError =
+document.getElementById("bookingError");
+
+
+bookingForm.addEventListener("submit", async function(event){
+
+  event.preventDefault();
+
+  bookingSuccess.style.display = "none";
+  bookingError.style.display = "none";
+
+  bookingButton.disabled = true;
+  bookingButton.textContent = "Submitting...";
+
+
+  const bookingData = {
+
+    name:
+      document.getElementById("bookingName").value.trim(),
+
+    phone:
+      document.getElementById("bookingPhone").value.trim(),
+
+    date:
+      document.getElementById("bookingDate").value,
+
+    time:
+      document.getElementById("bookingTime").value,
+
+    visitors:
+      document.getElementById("bookingVisitors").value,
+
+    experience:
+      document.getElementById("bookingExperience").value,
+
+    message:
+      document.getElementById("bookingMessage").value.trim()
+
+  };
+
+
+  try {
+
+    const { error } =
+      await supabaseClient
+        .from("bookings")
+        .insert([bookingData]);
+
+
+    if(error){
+      console.error("Supabase error:", error);
+      throw error;
+    }
+
+
+    bookingSuccess.style.display = "block";
+
+    bookingForm.reset();
+
+    bookingSuccess.scrollIntoView({
+      behavior:"smooth",
+      block:"center"
+    });
+
+  }
+
+  catch(error){
+
+    console.error("Booking error:", error);
+
+    bookingError.textContent =
+      "We couldn't submit your booking. Please try again.";
+
+    bookingError.style.display = "block";
+
+  }
+
+  finally{
+
+    bookingButton.disabled = false;
+    bookingButton.textContent = "Submit Booking";
+
+  }
+
+});
+
+</script></body>
+ </html>
