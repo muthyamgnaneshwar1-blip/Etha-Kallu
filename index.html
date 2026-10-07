@@ -1,8 +1,8 @@
  <!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Etha Kallu | Traditional Palm Heritage</title><meta name="description"
-content="Explore the traditional palm landscape and cultural heritage of Kalvacherla, Telangana.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Etha Kallu | Palm Heritage Experience</title><meta name="description"
+content="Discover Etha Kallu, traditional palm heritage and cultural experiences in Kalvacherla, Telangana.">
 
 <!-- Supabase --><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><style>
 *{
@@ -17,227 +17,454 @@ html{
 
 body{
   font-family:Arial,Helvetica,sans-serif;
-  background:#f4f7f1;
-  color:#26382b;
+  background:#f7f8f3;
+  color:#24382b;
   line-height:1.6;
 }
 
-/* NAVIGATION */
+/* =========================
+   HEADER
+========================= */
 
 header{
   position:sticky;
   top:0;
   z-index:1000;
-  background:rgba(255,255,255,.97);
-  box-shadow:0 2px 15px rgba(0,0,0,.08);
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #e8ede7;
 }
 
 nav{
-  max-width:1150px;
+  max-width:1180px;
   margin:auto;
-  padding:17px 6%;
+  padding:16px 5%;
   display:flex;
   justify-content:space-between;
   align-items:center;
 }
 
 .logo{
-  color:#17472d;
-  font-size:24px;
-  font-weight:bold;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#16472d;
+  font-size:25px;
+  font-weight:800;
+  letter-spacing:-.5px;
 }
 
-nav a{
-  color:#385342;
-  text-decoration:none;
-  margin-left:20px;
-  font-size:15px;
-}
-
-nav a:hover{
-  color:#17472d;
-}
-
-/* HERO */
-
-.hero{
-  min-height:620px;
+.logo-mark{
+  width:39px;
+  height:39px;
+  border-radius:12px;
+  background:#16472d;
+  color:white;
   display:flex;
   align-items:center;
   justify-content:center;
-  text-align:center;
-  padding:80px 6%;
-  color:white;
+  font-size:19px;
+}
 
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:24px;
+}
+
+.nav-links a{
+  color:#536257;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+}
+
+.nav-links a:hover{
+  color:#16472d;
+}
+
+.nav-cta{
+  padding:11px 18px;
+  border-radius:24px;
+  background:#16472d;
+  color:white !important;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  min-height:680px;
+  display:flex;
+  align-items:center;
+  position:relative;
+  color:white;
   background:
-    linear-gradient(rgba(15,55,32,.58),rgba(15,55,32,.58)),
+    linear-gradient(90deg,
+      rgba(9,43,25,.82),
+      rgba(9,43,25,.46),
+      rgba(9,43,25,.20)),
     url("mainphoto.jpg") center/cover no-repeat;
 }
 
 .hero-content{
-  max-width:820px;
+  width:100%;
+  max-width:1180px;
+  margin:auto;
+  padding:90px 5%;
+}
+
+.hero-badge{
+  display:inline-block;
+  padding:8px 15px;
+  border:1px solid rgba(255,255,255,.35);
+  background:rgba(255,255,255,.12);
+  backdrop-filter:blur(8px);
+  border-radius:30px;
+  font-size:13px;
+  font-weight:bold;
+  margin-bottom:22px;
 }
 
 .hero h1{
-  font-size:56px;
-  margin-bottom:20px;
+  max-width:760px;
+  font-size:64px;
+  line-height:1.08;
+  letter-spacing:-2px;
+  margin-bottom:22px;
 }
 
 .hero p{
-  font-size:20px;
-  max-width:700px;
-  margin:auto;
+  max-width:650px;
+  font-size:19px;
+  opacity:.93;
+}
+
+.hero-actions{
+  margin-top:34px;
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
 }
 
 .hero-button{
   display:inline-block;
-  margin-top:30px;
-  padding:14px 28px;
-  background:white;
-  color:#17472d;
-  text-decoration:none;
+  padding:15px 25px;
   border-radius:30px;
+  background:white;
+  color:#16472d;
+  text-decoration:none;
   font-weight:bold;
 }
 
-/* COMMON */
+.hero-button.secondary{
+  background:rgba(255,255,255,.13);
+  color:white;
+  border:1px solid rgba(255,255,255,.45);
+}
+
+/* =========================
+   COMMON
+========================= */
 
 section{
-  padding:75px 6%;
+  padding:90px 5%;
 }
 
 .container{
-  max-width:1100px;
+  max-width:1180px;
   margin:auto;
 }
 
+.section-heading{
+  max-width:700px;
+  margin-bottom:45px;
+}
+
+.section-label{
+  color:#7b5b2b;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:12px;
+  font-weight:bold;
+  margin-bottom:10px;
+}
+
 .section-title{
-  text-align:center;
-  color:#17472d;
-  font-size:38px;
-  margin-bottom:12px;
+  color:#16472d;
+  font-size:42px;
+  line-height:1.15;
+  letter-spacing:-1px;
+  margin-bottom:15px;
 }
 
 .section-text{
-  max-width:750px;
-  margin:0 auto 40px;
-  text-align:center;
-  color:#657168;
+  color:#68746b;
+  font-size:17px;
 }
 
-/* ABOUT */
+/* =========================
+   ABOUT
+========================= */
 
 .about{
   background:white;
 }
 
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.about-image{
+  border-radius:30px;
+  overflow:hidden;
+  box-shadow:0 20px 50px rgba(0,0,0,.13);
+}
+
+.about-image img{
+  width:100%;
+  height:470px;
+  object-fit:cover;
+  display:block;
+}
+
 .about-card{
-  max-width:850px;
-  margin:auto;
   padding:35px;
-  text-align:center;
-  background:#f4f7f1;
+  background:#f3f6ef;
   border-radius:25px;
-  color:#56635a;
+}
+
+.about-card p{
+  color:#59665d;
+  font-size:17px;
+  margin-bottom:18px;
+}
+
+.feature-row{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-top:25px;
+}
+
+.feature{
+  background:white;
+  border-radius:17px;
+  padding:18px 12px;
+  text-align:center;
+}
+
+.feature strong{
+  display:block;
+  color:#16472d;
   font-size:18px;
 }
 
-/* GALLERY */
-
-.gallery{
-  background:#eef4eb;
+.feature span{
+  color:#7a847d;
+  font-size:12px;
 }
 
-.photo{
+/* =========================
+   HERITAGE
+========================= */
+
+.heritage{
+  background:#edf3e9;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:1.35fr .85fr;
+  gap:22px;
+}
+
+.gallery-main{
+  height:590px;
+  border-radius:30px;
   overflow:hidden;
-  border-radius:28px;
-  background:white;
-  box-shadow:0 12px 30px rgba(0,0,0,.15);
 }
 
-.photo img{
+.gallery-side{
+  display:grid;
+  grid-template-rows:1fr 1fr;
+  gap:22px;
+}
+
+.gallery-small{
+  border-radius:30px;
+  overflow:hidden;
+}
+
+.gallery-grid img{
   width:100%;
-  display:block;
+  height:100%;
   object-fit:cover;
+  display:block;
   transition:transform .5s ease;
 }
 
-.photo img:hover{
-  transform:scale(1.03);
+.gallery-grid img:hover{
+  transform:scale(1.035);
 }
 
-/* MAIN PHOTO */
+/* =========================
+   EXPERIENCE CARDS
+========================= */
 
-.main-photo{
-  margin-bottom:40px;
-}
-
-.main-photo img{
-  height:500px;
-}
-
-/* DECORATIVE PHOTOS */
-
-.decorative-photo{
-  width:88%;
-  margin-bottom:40px;
-}
-
-.decorative-photo.right{
-  margin-left:12%;
-}
-
-.decorative-photo img{
-  height:370px;
-}
-
-/* LOCATION PHOTO */
-
-.location-photo{
-  margin-top:5px;
-}
-
-.location-photo img{
-  height:420px;
-}
-
-/* LOCATION */
-
-.location{
+.experiences{
   background:white;
-  text-align:center;
 }
 
-.location-info{
-  max-width:700px;
-  margin:auto;
-  padding:30px;
+.experience-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:25px;
+}
+
+.experience-card{
+  border:1px solid #e2e9e1;
   border-radius:25px;
-  background:#f1f5ef;
+  overflow:hidden;
+  background:white;
+  box-shadow:0 10px 30px rgba(0,0,0,.06);
+  transition:transform .25s ease,box-shadow .25s ease;
 }
 
-.location-info h3{
-  color:#17472d;
-  margin-bottom:10px;
+.experience-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 18px 40px rgba(0,0,0,.1);
 }
 
-.location-info p{
-  color:#657168;
+.experience-card img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  display:block;
 }
 
-/* BOOKING */
+.experience-content{
+  padding:24px;
+}
+
+.experience-tag{
+  color:#7b5b2b;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+  font-weight:bold;
+}
+
+.experience-content h3{
+  color:#16472d;
+  font-size:24px;
+  margin:7px 0;
+}
+
+.experience-content p{
+  color:#6b766e;
+  font-size:14px;
+}
+
+.experience-action{
+  margin-top:20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.experience-price{
+  font-size:20px;
+  font-weight:bold;
+  color:#16472d;
+}
+
+.select-experience{
+  border:none;
+  background:#16472d;
+  color:white;
+  padding:10px 17px;
+  border-radius:22px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+/* =========================
+   BOOKING
+========================= */
 
 .booking{
-  background:#eef4eb;
+  background:#f3f6ef;
+}
+
+.booking-layout{
+  display:grid;
+  grid-template-columns:.75fr 1.25fr;
+  gap:30px;
+  align-items:start;
+}
+
+.booking-intro{
+  padding:35px;
+  border-radius:28px;
+  background:#16472d;
+  color:white;
+  position:sticky;
+  top:105px;
+}
+
+.booking-intro h3{
+  font-size:28px;
+  margin-bottom:12px;
+}
+
+.booking-intro p{
+  opacity:.85;
+  font-size:15px;
+}
+
+.booking-list{
+  margin-top:25px;
+  list-style:none;
+}
+
+.booking-list li{
+  padding:11px 0;
+  border-bottom:1px solid rgba(255,255,255,.14);
+  font-size:14px;
 }
 
 .booking-box{
-  max-width:700px;
-  margin:auto;
-  padding:35px;
   background:white;
-  border-radius:25px;
-  box-shadow:0 10px 30px rgba(0,0,0,.09);
+  padding:35px;
+  border-radius:28px;
+  box-shadow:0 15px 45px rgba(0,0,0,.08);
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+
+.field{
+  margin-bottom:16px;
+}
+
+.field.full{
+  grid-column:1 / -1;
+}
+
+.field label{
+  display:block;
+  color:#405046;
+  font-size:13px;
+  font-weight:bold;
+  margin-bottom:7px;
 }
 
 .booking-box input,
@@ -245,462 +472,601 @@ section{
 .booking-box textarea{
   width:100%;
   padding:14px;
-  margin-bottom:16px;
-  border:1px solid #ccd6cd;
-  border-radius:12px;
+  border:1px solid #d7dfd8;
+  border-radius:13px;
+  background:#fbfcfa;
   font-family:Arial,sans-serif;
   font-size:15px;
   outline:none;
-  background:white;
 }
 
 .booking-box input:focus,
 .booking-box select:focus,
 .booking-box textarea:focus{
-  border-color:#17472d;
+  border-color:#16472d;
+  background:white;
 }
 
 .booking-box textarea{
   resize:vertical;
 }
 
-.booking-box button{
-  width:100%;
-  padding:15px;
+.quantity-box{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border:1px solid #d7dfd8;
+  border-radius:13px;
+  padding:6px;
+  background:#fbfcfa;
+}
+
+.quantity-box button{
+  width:40px;
+  height:40px;
   border:none;
-  border-radius:30px;
-  background:#17472d;
+  border-radius:10px;
+  background:#eaf0e9;
+  color:#16472d;
+  font-size:20px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.quantity-box span{
+  font-size:18px;
+  font-weight:bold;
+  color:#16472d;
+}
+
+.booking-summary{
+  margin:8px 0 20px;
+  padding:18px;
+  border-radius:17px;
+  background:#f3f6ef;
+}
+
+.booking-summary h4{
+  color:#16472d;
+  margin-bottom:8px;
+}
+
+.summary-line{
+  display:flex;
+  justify-content:space-between;
+  padding:5px 0;
+  color:#68746b;
+  font-size:14px;
+}
+
+.submit-button{
+  width:100%;
+  border:none;
+  border-radius:28px;
+  padding:16px;
+  background:#16472d;
   color:white;
   font-size:16px;
   font-weight:bold;
   cursor:pointer;
 }
 
-.booking-box button:hover{
+.submit-button:hover{
   background:#23643e;
 }
 
-.booking-box button:disabled{
+.submit-button:disabled{
   opacity:.6;
   cursor:not-allowed;
-}
-
-.booking-note{
-  text-align:center;
-  margin-top:15px;
-  color:#7a837d;
-  font-size:13px;
 }
 
 .booking-message{
   display:none;
   padding:14px;
   margin-bottom:18px;
-  border-radius:12px;
+  border-radius:13px;
   text-align:center;
   font-weight:bold;
 }
 
-.booking-success{
-  background:#e5f4e8;
+.success{
+  background:#e4f3e7;
   color:#176331;
 }
 
-.booking-error{
-  background:#fbe8e8;
-  color:#9b2525;
+.error{
+  background:#f9e6e6;
+  color:#982828;
 }
 
-/* CONTACT */
+/* =========================
+   LOCATION
+========================= */
+
+.location{
+  background:white;
+}
+
+.location-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+  align-items:stretch;
+}
+
+.location-image{
+  border-radius:28px;
+  overflow:hidden;
+}
+
+.location-image img{
+  width:100%;
+  height:400px;
+  object-fit:cover;
+  display:block;
+}
+
+.location-card{
+  padding:40px;
+  border-radius:28px;
+  background:#f3f6ef;
+}
+
+.location-card h3{
+  color:#16472d;
+  font-size:27px;
+  margin-bottom:10px;
+}
+
+.location-card p{
+  color:#667269;
+  margin-bottom:18px;
+}
+
+.location-button{
+  display:inline-block;
+  margin-top:10px;
+  padding:12px 20px;
+  border-radius:24px;
+  background:#16472d;
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* =========================
+   CONTACT
+========================= */
 
 .contact{
-  background:#f4f7f1;
+  background:#f7f8f3;
 }
 
-.form-box{
-  max-width:650px;
+.contact-box{
+  max-width:700px;
   margin:auto;
-  padding:35px;
+  padding:38px;
   background:white;
-  border-radius:25px;
-  box-shadow:0 10px 30px rgba(0,0,0,.09);
+  border-radius:28px;
+  box-shadow:0 12px 35px rgba(0,0,0,.07);
 }
 
-.form-box input,
-.form-box textarea{
+.contact-box input,
+.contact-box textarea{
   width:100%;
   padding:14px;
   margin-bottom:16px;
-  border:1px solid #ccd6cd;
-  border-radius:12px;
+  border:1px solid #d7dfd8;
+  border-radius:13px;
   font-family:Arial,sans-serif;
   font-size:15px;
   outline:none;
 }
 
-.form-box input:focus,
-.form-box textarea:focus{
-  border-color:#17472d;
-}
-
-.form-box textarea{
+.contact-box textarea{
   resize:vertical;
 }
 
-.form-box button{
+.contact-box button{
   width:100%;
   padding:15px;
   border:none;
-  border-radius:30px;
-  background:#17472d;
+  border-radius:28px;
+  background:#16472d;
   color:white;
-  font-size:16px;
   font-weight:bold;
+  font-size:16px;
   cursor:pointer;
 }
 
-.form-box button:hover{
-  background:#23643e;
-}
-
-.form-note{
-  text-align:center;
-  margin-top:15px;
-  color:#7a837d;
-  font-size:13px;
-}
-
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
-  background:#123a25;
+  background:#102f20;
   color:white;
-  text-align:center;
-  padding:40px 6%;
+  padding:50px 5%;
+}
+
+.footer-inner{
+  max-width:1180px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
 }
 
 footer h3{
-  font-size:22px;
+  font-size:24px;
   margin-bottom:8px;
 }
 
 footer p{
-  opacity:.85;
-  font-size:14px;
-  margin-top:5px;
+  color:rgba(255,255,255,.68);
+  font-size:13px;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
-@media(max-width:700px){
+@media(max-width:800px){
 
   nav{
     flex-direction:column;
-    gap:10px;
+    gap:13px;
   }
 
-  nav a{
-    margin:0 6px;
+  .nav-links{
+    gap:10px;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .nav-links a{
+    font-size:12px;
+  }
+
+  .nav-cta{
+    padding:8px 12px;
   }
 
   .hero{
-    min-height:540px;
+    min-height:600px;
+  }
+
+  .hero-content{
+    padding:70px 6%;
   }
 
   .hero h1{
-    font-size:39px;
+    font-size:42px;
+    letter-spacing:-1px;
   }
 
   .hero p{
     font-size:17px;
   }
 
+  section{
+    padding:65px 6%;
+  }
+
   .section-title{
-    font-size:30px;
+    font-size:33px;
   }
 
-  .main-photo img{
-    height:350px;
+  .about-grid,
+  .booking-layout,
+  .location-grid{
+    grid-template-columns:1fr;
   }
 
-  .decorative-photo,
-  .decorative-photo.right{
-    width:100%;
-    margin-left:0;
+  .booking-intro{
+    position:static;
   }
 
-  .decorative-photo img{
+  .gallery-grid{
+    grid-template-columns:1fr;
+  }
+
+  .gallery-main{
+    height:390px;
+  }
+
+  .gallery-side{
+    height:520px;
+  }
+
+  .experience-grid{
+    grid-template-columns:1fr;
+  }
+
+  .form-grid{
+    grid-template-columns:1fr;
+    gap:0;
+  }
+
+  .field.full{
+    grid-column:auto;
+  }
+
+  .location-image img{
     height:300px;
   }
 
-  .location-photo img{
-    height:300px;
-  }
-
-  .booking-box,
-  .form-box{
-    padding:25px 18px;
+  .footer-inner{
+    flex-direction:column;
   }
 }
-</style></head><body><!-- NAVIGATION --><header>
+
+@media(max-width:450px){
+
+  .hero h1{
+    font-size:36px;
+  }
+
+  .hero-actions{
+    flex-direction:column;
+  }
+
+  .hero-button{
+    text-align:center;
+  }
+
+  .booking-box{
+    padding:23px 17px;
+  }
+
+  .feature-row{
+    grid-template-columns:1fr;
+  }
+}
+</style></head><body><!-- =========================
+     NAVIGATION
+========================= --><header>
 <nav><div class="logo">
-Etha Kallu
-</div><div>
-<a href="#about">About</a>
-<a href="#heritage">Heritage</a>
-<a href="#location">Location</a>
-<a href="#booking">Book a Visit</a>
-<a href="#contact">Contact</a>
+  <div class="logo-mark">🌴</div>
+  Etha Kallu
+</div><div class="nav-links">
+  <a href="#about">About</a>
+  <a href="#heritage">Heritage</a>
+  <a href="#experiences">Experiences</a>
+  <a href="#location">Location</a>
+  <a href="#booking" class="nav-cta">Plan Visit</a>
 </div></nav>
-</header><!-- HERO --><section class="hero"><div class="hero-content"><h1>Traditional Palm Heritage</h1><p>
-Discover the natural beauty, palm landscapes and traditional
-surroundings of Kalvacherla, Telangana.
-</p><a href="#heritage" class="hero-button">
+</header><!-- =========================
+     HERO
+========================= --><section class="hero"><div class="hero-content"><div class="hero-badge">
+  🌿 KALVACHERLA • TELANGANA
+</div><h1>
+Experience the soul of traditional palm heritage.
+</h1><p>
+Discover the natural beauty, traditional landscapes and cultural
+surroundings of Etha Kallu in Kalvacherla.
+</p><div class="hero-actions"><a href="#booking" class="hero-button">
+Plan Your Visit
+</a><a href="#heritage" class="hero-button secondary">
 Explore Heritage
-</a></div></section><!-- ABOUT --><section class="about" id="about"><div class="container"><h2 class="section-title">
-About Our Heritage
-</h2><p class="section-text">
-A glimpse into the traditional palm landscape and local cultural
-surroundings of Kalvacherla.
-</p><div class="about-card"><p>
-Palm trees and traditional landscapes have long been part of
-rural life in Telangana. This website showcases the natural
-surroundings, local scenery and heritage of the Kalvacherla area.
-</p></div></div></section><!-- PHOTO GALLERY --><section class="gallery" id="heritage"><div class="container"><h2 class="section-title">
-Our Palm Heritage
-</h2><p class="section-text">
-Explore the beauty of the local palm landscape through these photographs.
-</p><div class="photo main-photo"><img
-src="mainphoto.jpg"
+</a></div></div></section><!-- =========================
+     ABOUT
+========================= --><section class="about" id="about"><div class="container"><div class="about-grid"><div class="about-image">
+<img src="mainphoto.jpg"
 alt="Traditional palm landscape of Kalvacherla">
-
-</div><div class="photo decorative-photo"><img
-src="palmtree.jpg"
+</div><div><div class="section-label">
+Our Story
+</div><h2 class="section-title">
+A living connection to Telangana's palm landscape.
+</h2><div class="about-card"><p>
+Etha Kallu brings together the natural beauty, traditional
+palm landscapes and cultural surroundings of Kalvacherla.
+</p><p>
+Our goal is to showcase the character of the region and
+create a simple way for visitors to discover and experience
+this unique local heritage.
+</p><div class="feature-row"><div class="feature">
+<strong>🌴</strong>
+<span>Palm Heritage</span>
+</div><div class="feature">
+<strong>📍</strong>
+<span>Kalvacherla</span>
+</div><div class="feature">
+<strong>🌿</strong>
+<span>Local Culture</span>
+</div></div></div></div></div></div></section><!-- =========================
+     HERITAGE GALLERY
+========================= --><section class="heritage" id="heritage"><div class="container"><div class="section-heading"><div class="section-label">
+Visual Heritage
+</div><h2 class="section-title">
+Explore the landscape.
+</h2><p class="section-text">
+A visual journey through the palm trees, natural surroundings
+and local heritage of Kalvacherla.
+</p></div><div class="gallery-grid"><div class="gallery-main">
+<img src="palmtree.jpg"
 alt="Palm tree landscape">
-
-</div><div class="photo decorative-photo right"><img
-src="palmtree 2.jpg"
+</div><div class="gallery-side"><div class="gallery-small">
+<img src="palmtree 2.jpg"
 alt="Palm trees and natural surroundings">
-
-</div><div class="photo location-photo"><img
-src="yellammatemple-location.jpg"
-alt="Ellamma Temple and surrounding location">
-
-</div></div></section><!-- LOCATION --><section class="location" id="location"><div class="container"><h2 class="section-title">
-Our Location
+</div><div class="gallery-small">
+<img src="yellammatemple-location.jpg"
+alt="Ellamma Temple area">
+</div></div></div></div></section><!-- =========================
+     EXPERIENCES
+========================= --><section class="experiences" id="experiences"><div class="container"><div class="section-heading"><div class="section-label">
+Discover Etha Kallu
+</div><h2 class="section-title">
+Choose your experience.
 </h2><p class="section-text">
-Kalvacherla, Telangana
-</p><div class="location-info"><h3>Ellamma Temple Area</h3><p>
-Near Ellamma Temple, Kalvacherla, Telangana.
-</p></div></div></section><!-- BOOKING --><section class="booking" id="booking"><div class="container"><h2 class="section-title">
-Book a Visit
+Select the experience you would like to request as part of
+your visit.
+</p></div><div class="experience-grid"><div class="experience-card"><img src="mainphoto.jpg"
+alt="Palm heritage experience">
+
+<div class="experience-content"><div class="experience-tag">
+Heritage
+</div><h3>Palm Heritage Visit</h3><p>
+Explore the traditional palm landscape and learn about
+the local surroundings.
+</p><div class="experience-action"><span class="experience-price">
+From ₹80
+</span><button class="select-experience"
+type="button"
+onclick="selectExperience('Heritage Visit')">
+Select
+</button>
+
+</div></div></div><div class="experience-card"><img src="palmtree.jpg"
+alt="Palm landscape experience">
+
+<div class="experience-content"><div class="experience-tag">
+Nature
+</div><h3>Palm Landscape Experience</h3><p>
+Spend time exploring the natural palm surroundings of
+Kalvacherla.
+</p><div class="experience-action"><span class="experience-price">
+From ₹150
+</span><button class="select-experience"
+type="button"
+onclick="selectExperience('Palm Landscape Visit')">
+Select
+</button>
+
+</div></div></div></div></div></section><!-- =========================
+     BOOKING
+========================= --><section class="booking" id="booking"><div class="container"><div class="section-heading"><div class="section-label">
+Plan Your Visit
+</div><h2 class="section-title">
+Make your visit request.
 </h2><p class="section-text">
-Plan your visit to experience the traditional palm heritage
-and surroundings of Kalvacherla.
-</p><div class="booking-box"><div id="bookingSuccess" class="booking-message booking-success">
-Your visit request has been submitted successfully. Thank you!
-</div><div id="bookingError" class="booking-message booking-error">
+Tell us when you would like to visit and what experience
+you are interested in.
+</p></div><div class="booking-layout"><div class="booking-intro"><h3>
+Your visit starts here.
+</h3><p>
+Complete the details and submit your request. Your information
+will be securely stored in our visitor database.
+</p><ul class="booking-list">
+<li>✓ Select your preferred experience</li>
+<li>✓ Choose your visit date</li>
+<li>✓ Tell us your preferred timing</li>
+<li>✓ Add your visitor count</li>
+<li>✓ Send any special request</li>
+</ul></div><div class="booking-box"><div id="bookingSuccess"
+class="booking-message success">
+Your visit request has been submitted successfully. 🌿
+</div><div id="bookingError"
+class="booking-message error">
 Something went wrong. Please try again.
-</div><form id="bookingForm"><input
+</div><form id="bookingForm"><div class="form-grid"><div class="field"><label for="bookingName">
+Full Name
+</label><input
 type="text"
 id="bookingName"
-placeholder="Your name"
-required
+placeholder="Enter your name"
+required>
 
-«»
-
-<input
+</div><div class="field"><label for="bookingPhone">
+Phone Number
+</label><input
 type="tel"
 id="bookingPhone"
-placeholder="Phone number"
-required
+placeholder="Enter phone number"
+required>
 
-«»
-
-<input
+</div><div class="field"><label for="bookingDate">
+Visit Date
+</label><input
 type="date"
 id="bookingDate"
-required
+required>
 
-«»
+</div><div class="field"><label for="bookingTime">
+Preferred Timing
+</label><select id="bookingTime" required><option value="">
+Choose timing
+</option><option value="Morning">
+Morning
+</option><option value="Afternoon">
+Afternoon
+</option><option value="Evening">
+Evening
+</option></select></div><div class="field"><label for="bookingVisitors">
+Number of Visitors
+</label><div class="quantity-box"><button
+type="button"
+onclick="changeVisitors(-1)">
+−
+</button>
 
-<select id="bookingTime" required>
-<option value="">Select preferred time</option>
-<option value="Morning">Morning</option>
-<option value="Afternoon">Afternoon</option>
-<option value="Evening">Evening</option>
-</select><input
-type="number"
+<span id="visitorCount">
+1
+</span><button
+type="button"
+onclick="changeVisitors(1)">
++
+</button>
+
+</div><input
+type="hidden"
 id="bookingVisitors"
-placeholder="Number of visitors"
-min="1"
-required
+value="1">
 
-«»
-
-<select id="bookingExperience" required>
-<option value="">Select experience</option>
-<option value="Heritage Visit">Heritage Visit</option>
-<option value="Palm Landscape Visit">Palm Landscape Visit</option>
-<option value="Cultural & Heritage Experience">Cultural & Heritage Experience</option>
-</select><textarea
+</div><div class="field"><label for="bookingExperience">
+Experience
+</label><select id="bookingExperience" required><option value="">
+Choose experience
+</option><option value="Heritage Visit">
+Palm Heritage Visit
+</option><option value="Palm Landscape Visit">
+Palm Landscape Experience
+</option><option value="Cultural & Heritage Experience">
+Cultural & Heritage Experience
+</option></select></div><div class="field full"><label for="bookingMessage">
+Special Request
+</label><textarea
 id="bookingMessage"
-rows="5"
-placeholder="Special request or message (optional)"
-></textarea><button type="submit" id="bookingButton">
-Submit Booking
-</button><p class="booking-note">
-Your booking request will be securely submitted to our visitor database.
-</p></form></div></div></section><!-- CONTACT --><section class="contact" id="contact"><div class="container"><h2 class="section-title">
-Contact Us
-</h2><p class="section-text">
-Have a question about the heritage site or local surroundings?
-Send us a message.
-</p><div class="form-box"><form
-action="https://formspree.io/f/mzeddzon"
-method="POST"
-><input
-type="text"
-name="name"
-placeholder="Your name"
-required
+rows="4"
+placeholder="Anything you would like us to know?">
+</textarea></div></div><div class="booking-summary"><h4>
+Visit Summary
+</h4><div class="summary-line"><span>Visitors</span>
 
-«»
+<strong id="summaryVisitors">
+1
+</strong></div><div class="summary-line"><span>Experience</span>
 
-<input
-type="email"
-name="email"
-placeholder="Your email"
-required
+<strong id="summaryExperience">
+Not selected
+</strong></div></div><button
+type="submit"
+class="submit-button"
+id="bookingButton">
 
-«»
+Request Availability
 
-<textarea
-name="message"
-rows="6"
-placeholder="Your message"
-required
-></textarea><button type="submit">
-Send Message
-</button><p class="form-note">
-Your message will be submitted through our contact form.
-</p></form></div></div></section><!-- FOOTER --><footer><h3>
-Etha Kallu
+</button></form></div></div></div></section><!-- =========================
+     LOCATION
+========================= --><section class="location" id="location"><div class="container"><div class="location-grid"><div class="location-image"><img src="yellammatemple-location.jpg"
+alt="Ellamma Temple area in Kalvacherla">
+
+</div><div class="location-card"><div class="section-label">
+Find Us
+</div><h3>
+Ellamma Temple Area
 </h3><p>
-Traditional Palm Heritage • Kalvacherla • Telangana
+Near Ellamma Temple, Kalvacherla, Telangana.
 </p><p>
-© 2026 Etha Kallu. All rights reserved.
-</p></footer><!-- SUPABASE BOOKING CONNECTION --><script>
+Visit the area and discover the traditional palm landscapes
+and local surroundings.
+</p><a
+class="location-button"
+href="https://www.google.com/maps/search/?api=1&query=Ellamma+Temple+Kalvacherla+Telangana"
+target="_blank">
 
-const SUPABASE_URL =
-"https://iwunctfokqdtwzmolchg.supabase.co";
+Open in Maps
 
-const SUPABASE_ANON_KEY =
-"sb_publishable_Ij931uPjudOAUqSGG-RJVQ_QAeLmexJ";
-
-const { createClient } = supabase;
-
-const supabaseClient =
-createClient(
-  SUPABASE_URL,
-  SUPABASE_ANON_KEY
-);
-
-
-const bookingForm =
-document.getElementById("bookingForm");
-
-const bookingButton =
-document.getElementById("bookingButton");
-
-const bookingSuccess =
-document.getElementById("bookingSuccess");
-
-const bookingError =
-document.getElementById("bookingError");
-
-
-bookingForm.addEventListener("submit", async function(event){
-
-  event.preventDefault();
-
-  bookingSuccess.style.display = "none";
-  bookingError.style.display = "none";
-
-  bookingButton.disabled = true;
-  bookingButton.textContent = "Submitting...";
-
-
-  const bookingData = {
-
-    name:
-      document.getElementById("bookingName").value.trim(),
-
-    phone:
-      document.getElementById("bookingPhone").value.trim(),
-
-    date:
-      document.getElementById("bookingDate").value,
-
-    time:
-      document.getElementById("bookingTime").value,
-
-    visitors:
-      document.getElementById("bookingVisitors").value,
-
-    experience:
-      document.getElementById("bookingExperience").value,
-
-    message:
-      document.getElementById("bookingMessage").value.trim()
-
-  };
-
-
-  try {
-
-    const { error } =
-      await supabaseClient
-        .from("bookings")
-        .insert([bookingData]);
-
-
-    if(error){
-      console.error("Supabase error:", error);
-      throw error;
-    }
-
-
-    bookingSuccess.style.display = "block";
-
-    bookingForm.reset();
-
-    bookingSuccess.scrollIntoView({
-      behavior:"smooth",
-      block:"center"
-    });
-
-  }
-
-  catch(error){
-
-    console.error("Booking error:", error);
-
-    bookingError.textContent =
-      "We couldn't submit your booking. Please try again.";
-
-    bookingError.style.display = "block";
-
-  }
-
-  finally{
-
-    bookingButton.disabled = false;
-    bookingButton.textContent = "Submit Booking";
-
-  }
-
-});
-
-</script></body>
- </html>
+</a></div></div></div></section><!-- =========================
+     CONTACT
+========================= --><section class="contact" id="contact"><div class="container"><div class="section-heading" style="m
